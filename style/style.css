@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree", serif;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+}
+label{
+    display: block;
+}
+label{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+input{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 10px;
+    font-size: 17px;
+    border: hsl(270, 3%, 87%) solid 1px;
+    border-radius: 7px;
+}
+
+.card{
+    position: relative;
+    background-image: url(../images/bg-main-desktop.png);
+    width: 28vw;
+    height: 100vh;
+    background-size: cover;
+    color: hsl(270, 3%, 87%);
+    overflow: visible;
+}
+
+.card_front{
+    position: absolute;
+    align-self: flex-end;
+    width: 450px;
+    padding: 25px;
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 210px;
+    right:-130px;
+}
+.card_num{
+    margin-top: 60px;
+    font-size: 35px;
+    font-weight: 400;
+}
+.cardholder_name{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+.card_back{
+    position: absolute;
+    width: 450px;
+    padding: 112px 60px 115px 225px;
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: right;
+    right: -240px;
+    bottom: 210px;
+}
+
+.inputs{
+    display: grid;
+    align-self: center;
+    width: 340px;
+    margin-right: 20%;
+    grid-template: repeat(4, 50px)/ repeat(2, 70px) 2fr;
+    gap: 40px 15px;
+}
+
+.input_name{
+    grid-column: 1/4;
+}
+.input_number{
+    grid-area: 2/1/2/4;
+}
+.input_date-container{
+    grid-area: 3/1/3/3;
+}
+.input_date{
+    display: flex;
+    gap: 10px;
+}
+.confirm-btn{
+    grid-column: 1/4;
+    margin: 0;
+    background-color: #220930;
+    color: hsl(270, 3%, 87%);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+@media (max-width:1240px) {
+    body{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 100vw;
+        height: 25vh;
+    }
+    .card_front{
+        z-index: 1;
+        width: 265px;
+        height: 150px;
+        padding: 15px;
+        bottom: -45px;
+        left:45px;
+    }
+    .card_logo{
+        width: 60px;
+    }
+    .card_num{
+        margin-top: 20px;
+        font-size: 21px;
+    }
+    .cardholder_name{
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    .card_back{
+        z-index: 0;
+        padding: 65px 30px;
+        width: 265px;
+        height: 150px;
+        font-size: 11px;
+        right: 20px;
+        top: 30px;
+    }
+    .inputs{
+        max-width: 340px;
+        margin: 0;
+        margin-top: 100px;
+    }
+}

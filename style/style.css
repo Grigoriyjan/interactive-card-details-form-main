@@ -53,7 +53,7 @@ input{
     font-size: 35px;
     font-weight: 400;
 }
-.cardholder_name{
+.card_info{
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
@@ -72,14 +72,17 @@ input{
     bottom: 210px;
 }
 
+.form{
+    align-self: center;
+    margin-right: 20%;
+}
 .inputs{
     display: grid;
-    align-self: center;
-    width: 340px;
-    margin-right: 20%;
-    grid-template: repeat(4, 50px)/ repeat(2, 70px) 2fr;
+    width: 360px;
+    grid-template: repeat(3, 50px)/ repeat(2, 75px) 2fr;
     gap: 40px 15px;
 }
+
 
 .input_name{
     grid-column: 1/4;
@@ -102,6 +105,29 @@ input{
     border: none;
     border-radius: 7px;
     cursor: pointer;
+}
+
+.message{
+    margin-top: 3px;
+    color: red;
+    font-size: 14px;
+}
+
+.completed_block{
+    text-align: center;
+    grid-area: 1/1/4/4;
+}
+.title{
+    margin-top: 30px;
+}
+.description{
+    color: #928E96;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.confirm-btn{
+    margin-top: 50px;
 }
 
 @media (max-width:1240px) {
@@ -141,7 +167,7 @@ input{
         right: 20px;
         top: 30px;
     }
-    .inputs{
+    .form{
         max-width: 340px;
         margin: 0;
         margin-top: 100px;
